@@ -3,19 +3,19 @@
 <body>
   
 <p>
-  <strong>Title</strong>
+  <strong>Title:</strong>
   <%= @book.title %>
 </p>
 
 <p>
-  <strong>Body</strong>
+  <strong>Body:</strong>
   <%= @book.body %>
 </p>
 
 <div>
-  <%=link_to "Edit",edit_book_path(@blog) %>
+  <%=link_to "Edit",edit_book_path(@book) %>
   <span>|</span>
   <%=link_to "Back",books_path %>
 </div>
-< % end %>
+<!--< % end %>-->
 </body>

@@ -14,12 +14,11 @@
     <div class="book_form"><%= f.text_area :body %></div>
   </div> 
   <div class="actions"><%= f.submit 'Update Book' %></div>
-  
+  <% end %>
   <div>
-  <%=link_to "Show",book_path(@blog) %>
+  <%=link_to "Show",book_path(@book) %>
   <span>|</span>
   <%=link_to "Back",books_path %>
   </div>
 </form>
-<% end %>
 </body>
