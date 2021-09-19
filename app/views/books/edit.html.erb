@@ -1,24 +1,30 @@
 <!--<h1>Books#edit</h1>-->
 <!--<p>Find me in app/views/books/edit.html.erb</p>-->
 <body>
-<h1>Editing Book</h1>
-<%= form_with model:@book,local:true do |f| %>
-
-<form class=new_book>
-  <div class=field>
-    <label for="book_title">Title</label>
-    <div class="book_form"><%= f.text_field :title %></div>
-  </div>  
-  <div class=field>
-    <label for="book_title">Body</label>
-    <div class="book_form"><%= f.text_area :body %></div>
-  </div> 
-  <div class="actions"><%= f.submit 'Update Book' %></div>
+  <h1>Editing Book</h1>
+  <% if @book.errors.any? %>
+    <%= @book.errors.count %>errors prohibited this book from being saved:
+    <% @book.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
   <% end %>
-  <div>
-  <%=link_to "Show",book_path(@book) %>
-  <span>|</span>
-  <%=link_to "Back",books_path %>
-  </div>
-</form>
+  <%= form_with model:@book,local:true do |f| %>
+  
+  <!--<form class=new_book>-->
+    <div class=field>
+      <label for="book_title">Title</label>
+      <div class="book_form"><%= f.text_field :title %></div>
+    </div>  
+    <div class=field>
+      <label for="book_title">Body</label>
+      <div class="book_form"><%= f.text_area :body %></div>
+    </div> 
+    <div class="actions"><%= f.submit 'Update Book' %></div>
+    <% end %>
+    <div>
+    <%=link_to "Show",book_path(@book) %>
+    <span>|</span>
+    <%=link_to "Back",books_path %>
+    </div>
+  <!--</form>-->
 </body>

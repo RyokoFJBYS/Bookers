@@ -1,22 +1,22 @@
 <!--<h1>Books#show</h1>-->
 <!--<p>Find me in app/views/books/show.html.erb</p>-->
 <body>
-<%= notice %>
+  <%= notice %>
+    
+  <p>
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </p>
   
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @book.body %>
-</p>
-
-<div>
-  <%=link_to "Edit",edit_book_path(@book) %>
-  <span>|</span>
-  <%=link_to "Back",books_path %>
-</div>
-<!--< % end %>-->
+  <p>
+    <strong>Body:</strong>
+    <%= @book.body %>
+  </p>
+  
+  <div>
+    <%=link_to "Edit",edit_book_path(@book) %>
+    <span>|</span>
+    <%=link_to "Back",books_path %>
+  </div>
+  <!--< % end %>-->
 </body>
