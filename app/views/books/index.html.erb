@@ -31,7 +31,7 @@
   <% end %>
   <%= form_with model:@book,local:true do |f| %>
   
-  <!--<form class=new_book>-->
+ 
     <div class=field>
       <label for="book_title">Title</label>
       <div class="book_form"><%= f.text_field :title %></div>
@@ -41,6 +41,6 @@
       <div class="book_form"><%= f.text_area :body %></div>
     </div> 
     <div class="actions"><%= f.submit 'Create Book' %></div>
-  <!--</form>-->
+  
   <% end %>
 </body>
